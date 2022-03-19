@@ -133,7 +133,7 @@ const cc = a()
 
 // a()()() // undefined()     >not a function
 
-a()()   //b()
+// a() = b   所以 a()()  //b()
 
 console.log(cc);
 
@@ -147,5 +147,6 @@ const h = document.querySelector("#hello")
 const hey = function () {
   console.log("點了");
 }
-
+// 外面先設定函數
+                        //帶到參數裡
 h.addEventListener("click", hey)

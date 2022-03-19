@@ -1,19 +1,34 @@
 function humanReadableTimer(seconds) {
+//   let hr = Math.floor(seconds / 3600)
+//   let min = Math.floor((seconds - hr * 3600) / 60)
+//   let sec = Math.floor(seconds % 60)
 
-  let hr = Math.floor(seconds / 3600)
-  //先除以3600，取整數 得到 => 小時數
-  let min = Math.floor((seconds - (hr * 3600)) / 60)
-  // 再來先減去小時數，除以 60 得到 => 分鐘數 
-  let sec = seconds % 60
-  // 最後取 60 的餘數得到 => 秒數 
 
-  hr = String(hr).padStart(2, "0")
-  min = String(min).padStart(2, "0")
-  sec = String(sec).padStart(2, "0")
-  //用 String.prototype.padStart()
-  //先將 hr, min, sec 轉換成字串，使用.padStart在左側賦予"0"
-  
-  return `${hr}:${min}:${sec}`
+//     function timetype(time) {
+//       if (time < 10 ){
+//         return time = "0" + time
+//       }
+//      return time
+//     }
+
+// return `${timetype(hr)}:${timetype(min)}:${timetype(sec)}`
+// }
+let hr = Math.floor(seconds / 3600)
+//先除以3600，取整數 得到 => 小時數
+let min = Math.floor((seconds - (hr * 3600)) / 60)
+// 再來先減去小時數，除以 60 得到 => 分鐘數 
+let sec = seconds % 60
+// 最後取 60 的餘數得到 => 秒數 
+
+hr = String(hr).padStart(2, "0")
+min = String(min).padStart(2, "0")
+sec = String(sec).padStart(2, "0")
+// 用 String.prototype.padStart()
+// 先將 hr, min, sec 轉換成字串，使用.padStart在左側賦予"0"
+
+
+
+return `${hr}:${min}:${sec}`
 }
 
 
@@ -56,3 +71,11 @@ console.log(humanReadableTimer(359999)) // 印出 99:59:59
   //   return times = times 
   // }
   // return `${timetype(hr)}:${timetype(min)}:${timetype(sec)}`
+
+
+
+
+
+
+
+
